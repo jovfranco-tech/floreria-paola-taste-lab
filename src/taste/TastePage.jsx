@@ -25,33 +25,29 @@ const NAV = [
 /* Unsplash CDN — stable photo IDs of real flowers */
 const IMG = {
   hero: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=640&h=800&q=80',
-  ramos: 'https://images.unsplash.com/photo-1490750967868-88aa4f44baee?auto=format&fit=crop&w=560&h=420&q=80',
+  ramos: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=560&h=420&q=80',
   eventos: 'https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=540&h=360&q=80',
   novia: 'https://images.unsplash.com/photo-1533616688419-b7a585564566?auto=format&fit=crop&w=540&h=360&q=80',
   eventoBig: 'https://images.unsplash.com/photo-1509587584298-0f3b3a3a1797?auto=format&fit=crop&w=720&h=540&q=80',
   gallery: [
-    { src: 'https://images.unsplash.com/photo-1455659817273-f96807779a8a?auto=format&fit=crop&w=480&h=600&q=80', alt: 'Tulipanes rosas', tag: 'Ramo' },
-    { src: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=480&h=400&q=80', alt: 'Centro de mesa floral', tag: 'Evento' },
-    { src: 'https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?auto=format&fit=crop&w=480&h=520&q=80', alt: 'Ramo de flores variadas', tag: 'Ramo' },
-    { src: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=480&h=480&q=80', alt: 'Rosas rojas', tag: 'Detalle' },
-    { src: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=480&h=560&q=80', alt: 'Arreglo rosa y blanco', tag: 'Arreglo' },
+    { src: 'https://images.unsplash.com/photo-1455659817273-f96807779a8a?auto=format&fit=crop&w=480&h=600&q=80', alt: 'Tulipanes rosas', tag: 'Ramo de Tulipanes' },
+    { src: 'https://images.unsplash.com/photo-1561181286-d3fee7d55364?auto=format&fit=crop&w=480&h=400&q=80', alt: 'Centro de mesa floral', tag: 'Centros de Mesa' },
+    { src: 'https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?auto=format&fit=crop&w=480&h=520&q=80', alt: 'Ramo de flores variadas', tag: 'Ramo Especial' },
+    { src: 'https://images.unsplash.com/photo-1526047932273-341f2a7631f9?auto=format&fit=crop&w=480&h=480&q=80', alt: 'Rosas rojas', tag: 'Ramo de Rosas' },
+    { src: 'https://images.unsplash.com/photo-1563241527-3004b7be0ffd?auto=format&fit=crop&w=480&h=560&q=80', alt: 'Arreglo rosa y blanco', tag: 'Arreglos Florales' },
     { src: 'https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?auto=format&fit=crop&w=480&h=420&q=80', alt: 'Flores de temporada', tag: 'Temporada' },
-    { src: 'https://images.unsplash.com/photo-1471696035578-3d8c78d99571?auto=format&fit=crop&w=480&h=500&q=80', alt: 'Rosas en tonos pastel', tag: 'Ramo' },
-    { src: 'https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&w=480&h=440&q=80', alt: 'Ramo romántico', tag: 'Detalle' },
+    { src: 'https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=480&h=500&q=80', alt: 'Rosas en tonos pastel', tag: 'Ramo de Novia' },
+    { src: 'https://images.unsplash.com/photo-1495231916356-a86217efff12?auto=format&fit=crop&w=480&h=440&q=80', alt: 'Ramo romántico', tag: 'Detalle Sorpresa' },
   ],
 }
 
 const OCASIONES = [
-  { name: 'Cumpleaños', msg: 'Hola, quiero un arreglo floral para un cumpleaños.' },
-  { name: 'Aniversarios', msg: 'Hola, quiero un arreglo para un aniversario.' },
-  { name: 'San Valentín', msg: 'Hola, quiero un arreglo para San Valentín.' },
-  { name: 'Día de las Madres', msg: 'Hola, quiero un arreglo para el Día de las Madres.' },
-  { name: 'Flores amarillas', msg: 'Hola, quiero un ramo de flores amarillas.' },
-  { name: 'Graduaciones', msg: 'Hola, quiero un arreglo para una graduación.' },
-  { name: 'Bodas', msg: 'Hola, quiero información de decoración floral para boda.' },
-  { name: 'XV años', msg: 'Hola, quiero información de arreglos florales para XV años.' },
-  { name: 'Condolencias', msg: 'Hola, quiero un arreglo de condolencias.' },
+  { name: 'Cumpleaños 🎂', msg: 'Hola, quiero un arreglo floral para un cumpleaños.' },
+  { name: 'Aniversarios 💖', msg: 'Hola, quiero un arreglo para un aniversario.' },
+  { name: 'San Valentín 🌹', msg: 'Hola, quiero un arreglo para San Valentín.' },
+  { name: 'Día de las Madres 👩', msg: 'Hola, quiero un arreglo para el Día de las Madres.' },
 ]
+
 
 function wa(msg) {
   return `${WA}?text=${encodeURIComponent(msg)}`
@@ -147,18 +143,25 @@ function Hero() {
     <section className="t-hero">
       <div className="t-container t-hero__grid">
         <div className="t-hero__text">
+          <div className="t-badge-local">
+            <span className="t-badge-local__dot"></span>
+            Taller Floral Familiar en CDMX
+          </div>
           <h1 className="t-h1">
-            Arreglos florales personalizados para cada ocasión
+            Diseños florales con alma y flores frescas de temporada
           </h1>
           <p className="t-hero__sub">
-            Ramos, centros de mesa y decoración de eventos con flores frescas en la Ciudad de México. Tu florería de confianza.
+            En <strong>Florería Paola AR</strong> creamos ramos personalizados y decoración artesanal para tus momentos más especiales. Haz tu pedido hoy con atención cercana y directa por WhatsApp.
           </p>
-          <a href={wa('Hola, quiero cotizar un arreglo floral. Mi ocasión es:')} target="_blank" rel="noopener noreferrer" className="t-btn">
+          <a href={wa('Hola, quiero cotizar un arreglo floral personalizado.')} target="_blank" rel="noopener noreferrer" className="t-btn">
             <WaIcon /> Cotizar por WhatsApp
           </a>
         </div>
         <div className="t-hero__media">
-          <img src={IMG.hero} alt="Ramo de flores frescas armado a mano" className="t-hero__img" width="640" height="800" loading="eager" />
+          <div className="t-hero__img-frame">
+            <img src={IMG.hero} alt="Arreglo floral artesanal en CDMX" className="t-hero__img" width="640" height="800" loading="eager" />
+            <div className="t-hero__note-badge">Hecho a mano en CDMX</div>
+          </div>
         </div>
       </div>
     </section>
@@ -172,7 +175,7 @@ function Trust() {
       <div className="t-container t-trust__inner">
         <span className="t-trust__item"><LeafSvg /> Flores frescas de temporada</span>
         <span className="t-trust__sep" aria-hidden="true" />
-        <span className="t-trust__item"><LeafSvg /> Atención directa por WhatsApp</span>
+        <span className="t-trust__item"><LeafSvg /> Atención personal por WhatsApp</span>
         <span className="t-trust__sep" aria-hidden="true" />
         <span className="t-trust__item"><LeafSvg /> Florería familiar en CDMX</span>
       </div>
@@ -186,44 +189,54 @@ function Servicios() {
     <section id="servicios" className="t-section">
       <div className="t-container">
         <h2 className="t-h2">Nuestros servicios florales</h2>
-        <p className="t-section__sub">Cada arreglo se diseña a tu medida con flores frescas del día.</p>
+        <p className="t-section__sub">Cada detalle cuenta. Diseñamos contigo la propuesta ideal.</p>
 
-        {/* Top: 1 large + 2 stacked (asymmetric, skill-guided) */}
+        {/* Top: 1 large + 2 stacked (asymmetric layout) */}
         <div className="t-srv__top">
           <a href={wa('Hola, quiero cotizar un ramo personalizado.')} target="_blank" rel="noopener noreferrer" className="t-srv__main">
-            <img src={IMG.ramos} alt="Ramo de rosas rosas personalizadas" className="t-srv__img" width="560" height="420" loading="lazy" />
+            <div className="t-srv__img-wrap">
+              <img src={IMG.ramos} alt="Ramo de flores frescas personalizadas" className="t-srv__img" width="560" height="420" loading="lazy" />
+              <span className="t-srv__badge">Servicio estrella</span>
+            </div>
             <div className="t-srv__body">
               <h3 className="t-srv__title">Ramos personalizados</h3>
-              <p className="t-srv__desc">Elegimos las flores contigo. Ramo único, armado el mismo día con flores de temporada.</p>
+              <p className="t-srv__desc">Tú eliges los tonos y envolturas; nosotros seleccionamos las mejores flores del día para armar una pieza única.</p>
               <span className="t-srv__link">Cotizar ramo →</span>
             </div>
           </a>
 
           <div className="t-srv__side">
             <a href={wa('Hola, quiero cotizar decoración floral para un evento.')} target="_blank" rel="noopener noreferrer" className="t-srv__card">
-              <img src={IMG.eventos} alt="Mesa decorada con flores para evento" className="t-srv__img-sm" width="540" height="360" loading="lazy" />
+              <img src={IMG.eventos} alt="Decoración de eventos familiares en CDMX" className="t-srv__img-sm" width="540" height="360" loading="lazy" />
               <div className="t-srv__body">
                 <h3 className="t-srv__title">Decoración de eventos</h3>
-                <p className="t-srv__desc">Bodas, XV años y fiestas con decoración floral completa.</p>
+                <p className="t-srv__desc">Bodas, XV años y reuniones familiares. Diseñamos la ambientación completa a tu presupuesto.</p>
               </div>
             </a>
             <a href={wa('Hola, quiero cotizar un ramo de novia.')} target="_blank" rel="noopener noreferrer" className="t-srv__card">
-              <img src={IMG.novia} alt="Novia sosteniendo ramo de flores" className="t-srv__img-sm" width="540" height="360" loading="lazy" />
+              <img src={IMG.novia} alt="Ramos de novia hechos a mano" className="t-srv__img-sm" width="540" height="360" loading="lazy" />
               <div className="t-srv__body">
                 <h3 className="t-srv__title">Ramos de novia</h3>
-                <p className="t-srv__desc">Diseñados para acompañarte en tu día especial.</p>
+                <p className="t-srv__desc">Diseño exclusivo y delicado para tu gran día. Combinamos texturas y follajes de temporada.</p>
               </div>
             </a>
           </div>
         </div>
 
-        {/* Bottom: compact row (no equal cards - different sizing) */}
+        {/* Trust microcopy */}
+        <div className="t-srv__microcopy">
+          <p>
+            💡 <strong>Atención CDMX:</strong> No trabajamos con catálogos industriales fijos. Nos compartes tu idea por WhatsApp, tu presupuesto y fecha de entrega, y te asesoramos para elegir las flores ideales que transmitan tu mensaje.
+          </p>
+        </div>
+
+        {/* Bottom: compact row (no equal cards - chip layout) */}
         <div className="t-srv__row">
           {[
-            { n: 'XV años', m: 'Hola, quiero información de arreglos florales para XV años.' },
-            { n: 'Centros de mesa', m: 'Hola, quiero cotizar centros de mesa.' },
-            { n: 'Arreglos florales', m: 'Hola, quiero cotizar un arreglo floral.' },
-            { n: 'Detalles sorpresa', m: 'Hola, quiero cotizar un detalle floral sorpresa.' },
+            { n: 'XV años 🌸', m: 'Hola, quiero información de arreglos florales para XV años.' },
+            { n: 'Centros de mesa 🍽️', m: 'Hola, quiero cotizar centros de mesa.' },
+            { n: 'Arreglos florales 💐', m: 'Hola, quiero cotizar un arreglo floral.' },
+            { n: 'Detalles sorpresa 🎁', m: 'Hola, quiero cotizar un detalle floral sorpresa.' },
           ].map(s => (
             <a key={s.n} href={wa(s.m)} target="_blank" rel="noopener noreferrer" className="t-srv__chip">
               {s.n} <span className="t-srv__chip-arrow">→</span>
@@ -240,24 +253,26 @@ function Galeria() {
   return (
     <section id="galeria" className="t-section t-section--alt">
       <div className="t-container">
-        <span className="t-kicker">Galería</span>
-        <h2 className="t-h2">Arreglos que ya hicieron feliz a alguien</h2>
+        <span className="t-kicker">Galería de arreglos</span>
+        <h2 className="t-h2">Diseños que ya entregamos con amor</h2>
+        <p className="t-section__sub">Fotos reales de trabajos entregados en CDMX. Hacemos cada diseño único.</p>
 
         <div className="t-gal">
           {IMG.gallery.map(img => (
-            <a key={img.alt} href={wa(`Hola, me encantó el arreglo "${img.alt}" de su galería. Quiero cotizar algo similar.`)}
+            <a key={img.alt} href={wa(`Hola, me interesó el diseño "${img.alt}" de su galería y quiero cotizar uno similar.`)}
               target="_blank" rel="noopener noreferrer" className="t-gal__item">
               <img src={img.src} alt={img.alt} loading="lazy" className="t-gal__img" />
               <div className="t-gal__over">
                 <span className="t-gal__tag">{img.tag}</span>
                 <span className="t-gal__title">{img.alt}</span>
-                <span className="t-gal__cta"><WaIcon size={13} /> Cotizar este arreglo</span>
+                <span className="t-gal__location">📍 Taller CDMX</span>
+                <span className="t-gal__cta"><WaIcon size={13} /> Cotizar por WhatsApp</span>
               </div>
             </a>
           ))}
         </div>
 
-        <p className="t-gal__note">Cada arreglo se personaliza. La disponibilidad de flores puede variar según temporada.</p>
+        <p className="t-gal__note">Cada arreglo es personalizado y hecho desde cero. El follaje y tipo de flor exacto puede cambiar de acuerdo a la época del año para garantizar frescura.</p>
       </div>
     </section>
   )
@@ -268,8 +283,8 @@ function Ocasiones() {
   return (
     <section id="ocasiones" className="t-section">
       <div className="t-container">
-        <h2 className="t-h2">Flores para cada momento</h2>
-        <p className="t-section__sub">Elige la ocasión y te enviamos opciones por WhatsApp.</p>
+        <h2 className="t-h2">Arreglos para cada momento</h2>
+        <p className="t-section__sub">Escríbenos por WhatsApp la fecha y tipo de ocasión; te enviaremos sugerencias personalizadas.</p>
         <div className="t-oca">
           {OCASIONES.map(o => (
             <a key={o.name} href={wa(o.msg)} target="_blank" rel="noopener noreferrer" className="t-oca__pill">
@@ -285,10 +300,10 @@ function Ocasiones() {
 /* ===== EVENTOS ===== */
 function Eventos() {
   const checks = [
-    'Decoración floral para bodas y XV años',
-    'Centros de mesa y arreglos para la celebración',
-    'Ramos de novia y accesorios florales',
-    'Propuestas para diferentes presupuestos',
+    'Diseño a medida de bodas, XV años y bautizos',
+    'Centros de mesa personalizados y arreglos para la mesa de dulces',
+    'Ramos de novia especiales y tocados de flores naturales',
+    'Opciones adaptadas a diferentes presupuestos y estilos de recintos',
   ]
 
   return (
@@ -296,10 +311,10 @@ function Eventos() {
       <div className="t-container">
         <div className="t-evt__grid">
           <div className="t-evt__text">
-            <span className="t-kicker">Eventos</span>
-            <h2 className="t-h2">Bodas, XV años y celebraciones con alma</h2>
+            <span className="t-kicker">Eventos familiares</span>
+            <h2 className="t-h2">Bodas, XV años y celebraciones familiares en CDMX</h2>
             <p className="t-evt__desc">
-              Desde los centros de mesa hasta el ramo de novia, cuidamos que las flores acompañen cada momento de tu evento.
+              Cuidamos que la decoración floral cuente tu historia. Desde el ramo de novia hasta el arreglo más pequeño de las mesas, todo es diseñado de forma artesanal y colocado a mano el día del evento.
             </p>
             <ul className="t-evt__checks">
               {checks.map(c => (
@@ -309,12 +324,15 @@ function Eventos() {
                 </li>
               ))}
             </ul>
-            <a href={wa('Hola, quiero cotizar decoración floral para mi evento.')} target="_blank" rel="noopener noreferrer" className="t-btn">
+            <a href={wa('Hola, quiero cotizar la decoración floral para mi evento en CDMX.')} target="_blank" rel="noopener noreferrer" className="t-btn">
               <WaIcon /> Cotizar mi evento
             </a>
           </div>
           <div className="t-evt__media">
-            <img src={IMG.eventoBig} alt="Arreglos florales en florería" className="t-evt__img" width="720" height="540" loading="lazy" />
+            <div className="t-evt__img-frame">
+              <img src={IMG.eventoBig} alt="Decoración de bodas en Ciudad de México" className="t-evt__img" width="720" height="540" loading="lazy" />
+              <div className="t-evt__badge-note">Decoración Floral CDMX</div>
+            </div>
           </div>
         </div>
       </div>
@@ -325,15 +343,16 @@ function Eventos() {
 /* ===== CÓMO PEDIR ===== */
 function ComoPedir() {
   const steps = [
-    { n: '1', title: 'Escríbenos por WhatsApp', desc: 'Cuéntanos la ocasión, tu presupuesto y cualquier preferencia de flores o colores.' },
-    { n: '2', title: 'Diseñamos tu propuesta', desc: 'Te enviamos opciones con fotos de referencia. Ajustamos hasta que quede perfecto.' },
-    { n: '3', title: 'Confirmas y listo', desc: 'Coordinamos entrega en CDMX o lo preparamos para que lo recojas. Siempre fresco.' },
+    { n: '1', title: 'Cuéntanos tu idea por WhatsApp', desc: 'Dinos qué ocasión celebras, la fecha de entrega en CDMX, tu presupuesto aproximado y cualquier tono o tipo de flor de preferencia.' },
+    { n: '2', title: 'Diseñamos tu propuesta única', desc: 'Te sugerimos el tipo de arreglo y flores ideales de temporada. Te enviamos fotos de referencia hasta definir el diseño final.' },
+    { n: '3', title: 'Confirmas y entregamos', desc: 'Una vez de acuerdo, coordinamos el pago y preparamos tu arreglo para entregarlo fresco directamente a domicilio.' },
   ]
 
   return (
     <section id="como-pedir" className="t-section">
       <div className="t-container">
-        <h2 className="t-h2">Tu arreglo en 3 pasos</h2>
+        <h2 className="t-h2">Tu arreglo personalizado en 3 pasos</h2>
+        <p className="t-section__sub">Hacer tu pedido es fácil, rápido y con trato humano directo.</p>
         <div className="t-steps">
           {steps.map(s => (
             <div key={s.n} className="t-steps__item">
@@ -346,7 +365,7 @@ function ComoPedir() {
           ))}
         </div>
         <div className="t-steps__cta">
-          <a href={wa('Hola, quiero cotizar un arreglo floral. Mi ocasión es:')} target="_blank" rel="noopener noreferrer" className="t-btn">
+          <a href={wa('Hola, quiero hacer un pedido de flores. Mi idea es:')} target="_blank" rel="noopener noreferrer" className="t-btn">
             <WaIcon /> Empezar mi pedido
           </a>
         </div>
@@ -360,7 +379,7 @@ function Quote() {
   return (
     <section className="t-section t-quote-section">
       <div className="t-container">
-        <span className="t-kicker">Nuestra filosofía</span>
+        <span className="t-kicker">Filosofía familiar</span>
         <blockquote className="t-quote">
           <p className="t-quote__text">
             "Cada flor tiene algo que decir. Nosotras ayudamos a que tu mensaje llegue con amor."
@@ -378,19 +397,19 @@ function CtaFinal() {
     <section className="t-cta">
       <div className="t-container t-cta__inner">
         <h2 className="t-cta__h">Cuéntanos qué quieres transmitir y lo convertimos en flores</h2>
-        <p className="t-cta__sub">Escríbenos por WhatsApp con la ocasión, tu presupuesto y la fecha.</p>
-        <a href={wa('Hola, quiero cotizar un arreglo floral. Mi ocasión es:')} target="_blank" rel="noopener noreferrer" className="t-btn t-btn--inv">
+        <p className="t-cta__sub">Escríbenos por WhatsApp. Cotiza tu arreglo o evento familiar con entrega en la Ciudad de México y zona metropolitana.</p>
+        <a href={wa('Hola, quiero cotizar un arreglo floral.')} target="_blank" rel="noopener noreferrer" className="t-btn t-btn--inv">
           <WaIcon /> Cotizar por WhatsApp
         </a>
         <div className="t-cta__phones">
           {WA_NUMBERS.map(p => (
-            <a key={p.href} href={`${p.href}?text=${encodeURIComponent('Hola, quiero cotizar un arreglo floral.')}`}
+            <a key={p.href} href={`${p.href}?text=${encodeURIComponent('Hola, quiero cotizar un arreglo floral personalizado.')}`}
               target="_blank" rel="noopener noreferrer" className="t-cta__phone">
               <WaIcon size={14} /> {p.label}
             </a>
           ))}
         </div>
-        <p className="t-cta__note">La disponibilidad de flores puede variar según temporada.</p>
+        <p className="t-cta__note">Arreglos artesanales con entrega a domicilio en CDMX. La disponibilidad de flores varía según la temporada.</p>
       </div>
     </section>
   )
@@ -403,7 +422,7 @@ function Footer() {
       <div className="t-container t-footer__grid">
         <div>
           <div className="t-footer__brand"><LeafSvg /> Florería Paola AR</div>
-          <p className="t-footer__tagline">Ramos personalizados, arreglos florales y decoración para eventos sociales en la Ciudad de México.</p>
+          <p className="t-footer__tagline">Ramos personalizados, arreglos florales y decoración para bodas, XV años y eventos familiares en la Ciudad de México.</p>
           <div className="t-footer__social">
             <a href="https://www.instagram.com/floreriapaolaar" target="_blank" rel="noopener noreferrer" aria-label="Instagram">IG</a>
             <a href="https://www.facebook.com/FloreriaPaolaAR" target="_blank" rel="noopener noreferrer" aria-label="Facebook">FB</a>
@@ -420,7 +439,7 @@ function Footer() {
           </ul>
         </div>
         <div>
-          <h4 className="t-footer__title">WhatsApp</h4>
+          <h4 className="t-footer__title">WhatsApp Directo</h4>
           <ul className="t-footer__links">
             {WA_NUMBERS.map(p => (
               <li key={p.href}><a href={`${p.href}?text=${encodeURIComponent('Hola, quiero cotizar un arreglo floral.')}`} target="_blank" rel="noopener noreferrer">{p.label}</a></li>
@@ -430,7 +449,7 @@ function Footer() {
         </div>
       </div>
       <div className="t-container">
-        <div className="t-footer__bottom">© {new Date().getFullYear()} Florería Paola AR. Todos los derechos reservados.</div>
+        <div className="t-footer__bottom">© {new Date().getFullYear()} Florería Paola AR. Todos los derechos reservados. Diseños florales artesanales en CDMX.</div>
       </div>
     </footer>
   )
@@ -439,7 +458,7 @@ function Footer() {
 /* ===== FAB ===== */
 function Fab() {
   return (
-    <a href={wa('Hola, quiero cotizar un arreglo floral.')} target="_blank" rel="noopener noreferrer"
+    <a href={wa('Hola, quiero cotizar un arreglo floral personalizado.')} target="_blank" rel="noopener noreferrer"
       className="t-fab" aria-label="Cotizar por WhatsApp">
       <WaIcon size={28} />
     </a>
@@ -467,3 +486,4 @@ export default function TastePage() {
     </div>
   )
 }
+
