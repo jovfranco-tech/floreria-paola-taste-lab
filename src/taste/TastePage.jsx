@@ -153,8 +153,15 @@ function Hero() {
           <p className="t-hero__sub">
             En <strong>Florería Paola AR</strong> creamos ramos personalizados y decoración artesanal para tus momentos más especiales. Haz tu pedido hoy con atención cercana y directa por WhatsApp.
           </p>
+          <div className="t-hero__tags" aria-label="Nuestras especialidades florales">
+            <span className="t-hero__tag-item">Ramos personalizados</span>
+            <span className="t-hero__tag-item">Eventos</span>
+            <span className="t-hero__tag-item">Novia</span>
+            <span className="t-hero__tag-item">XV años</span>
+            <span className="t-hero__tag-item">Condolencias</span>
+          </div>
           <a href={wa('Hola, quiero cotizar un arreglo floral personalizado.')} target="_blank" rel="noopener noreferrer" className="t-btn">
-            <WaIcon /> Cotizar por WhatsApp
+            <WaIcon /> Cotizar arreglo por WhatsApp
           </a>
         </div>
         <div className="t-hero__media">
@@ -167,6 +174,7 @@ function Hero() {
     </section>
   )
 }
+
 
 /* ===== TRUST ===== */
 function Trust() {
@@ -399,7 +407,7 @@ function CtaFinal() {
         <h2 className="t-cta__h">Cuéntanos qué quieres transmitir y lo convertimos en flores</h2>
         <p className="t-cta__sub">Escríbenos por WhatsApp. Cotiza tu arreglo o evento familiar con entrega en la Ciudad de México y zona metropolitana.</p>
         <a href={wa('Hola, quiero cotizar un arreglo floral.')} target="_blank" rel="noopener noreferrer" className="t-btn t-btn--inv">
-          <WaIcon /> Cotizar por WhatsApp
+          <WaIcon /> Cotizar arreglo por WhatsApp
         </a>
         <div className="t-cta__phones">
           {WA_NUMBERS.map(p => (

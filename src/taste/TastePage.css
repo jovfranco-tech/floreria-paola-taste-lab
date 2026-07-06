@@ -304,6 +304,30 @@
   font-weight: 600;
 }
 
+.t-hero__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.t-hero__tag-item {
+  font-family: var(--t-font-d);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--t-text2);
+  background-color: #fff;
+  border: 1px solid var(--t-border);
+  padding: 4px 10px;
+  border-radius: var(--t-pill);
+  transition: border-color var(--t-dur) var(--t-ease), color var(--t-dur) var(--t-ease);
+}
+
+.t-hero__tag-item:hover {
+  border-color: var(--t-green);
+  color: var(--t-green);
+}
+
+
 .t-hero__img-frame {
   position: relative;
   background: #fff;
@@ -376,6 +400,10 @@
 }
 
 /* ── Services ── */
+#servicios {
+  padding-top: 56px;
+}
+
 .t-srv__top {
   display: grid;
   grid-template-columns: 1.3fr 1fr;
