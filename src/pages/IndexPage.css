@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap');
+
+.idx {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Outfit', system-ui, sans-serif;
+  background: #fafaf8;
+  color: #1a1a1a;
+}
+
+.idx-header {
+  text-align: center;
+  padding: 64px 24px 0;
+}
+
+.idx-header h1 {
+  font-size: clamp(28px, 5vw, 42px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.idx-sub {
+  margin-top: 8px;
+  font-size: 15px;
+  color: #777;
+  font-weight: 400;
+}
+
+.idx-main {
+  flex: 1;
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+  width: 100%;
+}
+
+.idx-desc {
+  text-align: center;
+  color: #555;
+  font-size: 17px;
+  margin-bottom: 40px;
+  line-height: 1.6;
+}
+
+.idx-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .idx-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.idx-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 28px;
+  border-radius: 12px;
+  border: 1px solid #e5e5e0;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.idx-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.idx-card--baseline {
+  background: #fbf6f0;
+}
+
+.idx-card--baseline:hover {
+  border-color: #c4977a;
+}
+
+.idx-card--taste {
+  background: #f0f5f2;
+}
+
+.idx-card--taste:hover {
+  border-color: #1b3a2d;
+}
+
+.idx-card-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #999;
+  margin-bottom: 12px;
+}
+
+.idx-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.idx-card p {
+  font-size: 15px;
+  color: #666;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.idx-card-cta {
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1b3a2d;
+}
+
+.idx-footer {
+  text-align: center;
+  padding: 24px;
+  font-size: 13px;
+  color: #aaa;
+  border-top: 1px solid #eee;
+}
