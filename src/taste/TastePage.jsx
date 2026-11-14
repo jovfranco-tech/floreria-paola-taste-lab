@@ -22,7 +22,7 @@ const NAV = [
   { label: 'Cómo pedir', id: 'como-pedir' },
 ]
 
-/* Unsplash CDN — stable photo IDs of real flowers */
+/* Unsplash CDN — demonstration/reference imagery; not evidence of Florería Paola delivered work */
 const IMG = {
   hero: 'https://images.unsplash.com/photo-1487530811176-3780de880c2d?auto=format&fit=crop&w=640&h=800&q=80',
   ramos: 'https://images.unsplash.com/photo-1527061011665-3652c757a4d4?auto=format&fit=crop&w=560&h=420&q=80',
@@ -167,7 +167,7 @@ function Hero() {
         <div className="t-hero__media">
           <div className="t-hero__img-frame">
             <img src={IMG.hero} alt="Arreglo floral artesanal en CDMX" className="t-hero__img" width="640" height="800" loading="eager" />
-            <div className="t-hero__note-badge">Hecho a mano en CDMX</div>
+            <div className="t-hero__note-badge">Imagen de referencia</div>
           </div>
         </div>
       </div>
@@ -262,8 +262,8 @@ function Galeria() {
     <section id="galeria" className="t-section t-section--alt">
       <div className="t-container">
         <span className="t-kicker">Galería de arreglos</span>
-        <h2 className="t-h2">Diseños que ya entregamos con amor</h2>
-        <p className="t-section__sub">Fotos reales de trabajos entregados en CDMX. Hacemos cada diseño único.</p>
+        <h2 className="t-h2">Inspiración visual para tu próximo arreglo</h2>
+        <p className="t-section__sub">Imágenes de demostración para explorar estilos y solicitar una propuesta personalizada.</p>
 
         <div className="t-gal">
           {IMG.gallery.map(img => (
@@ -273,7 +273,7 @@ function Galeria() {
               <div className="t-gal__over">
                 <span className="t-gal__tag">{img.tag}</span>
                 <span className="t-gal__title">{img.alt}</span>
-                <span className="t-gal__location">📍 Taller CDMX</span>
+                <span className="t-gal__location">Imagen de referencia</span>
                 <span className="t-gal__cta"><WaIcon size={13} /> Cotizar por WhatsApp</span>
               </div>
             </a>
